@@ -1,0 +1,56 @@
+
+import java.util.Scanner; 
+class main {
+public  static void main(String[] args) {
+	Scanner myObj = new Scanner(System.in);
+	String s;
+	 System.out.println("Enter your word: "); 
+	 s = myObj.nextLine(); 
+	
+	 
+	// Scanner myObj2 = new Scanner(System.in);
+		String s2;
+		 System.out.println("Enter your word: "); 
+		 s2 = myObj.nextLine(); 
+		 
+	 logic.isPalindrome(s);
+	 
+	 int count=0;
+	 int count1=0;
+	 for (int i = 0; i < s.length(); i++) {
+         // check if char[i] is vowel
+         if (s.charAt(i) == 'a' || s.charAt(i) == 'e'
+             || s.charAt(i) == 'i'
+             || s.charAt(i) == 'o'
+             || s.charAt(i) == 'u') {
+             // count increments if there is vowel in
+             // char[i]
+             count++;
+         } else {
+        	 count1++;
+         }
+		 
+	 }
+	 System.out.println( "Total no of vowels in your word are: " + count+"\n");
+     System.out.println( "Total no of consonants  in your word are: " + count1+"\n");
+     
+     System.out.println(s2.contains(s));
+}
+}
+
+
+public class logic {
+	public static void isPalindrome(String str){  
+	    StringBuilder sb=new StringBuilder(str);  
+	    sb.reverse();  
+	    String rev=sb.toString();  
+	    if(str.equals(rev)){  
+	        System.out.println("This word is Palindrome "+"\n");  
+	    }else{  
+	    	 System.out.println("This word isn't Palindrome"+" \n");  
+	    } 
+	}
+	
+	
+}
+
