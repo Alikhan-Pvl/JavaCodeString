@@ -1,0 +1,42 @@
+package forGit;
+
+import java.util.Scanner;
+
+public class Fibban {
+
+	public static void main(String args[])  
+	{    
+	 int n1=1,n2=1,n3,i;    
+	// //printing 0 and 1    
+	    
+	 Scanner myObj = new Scanner(System.in);
+		int s;
+		 s = myObj.nextInt(); 
+		 System.out.print(n1+" "+n2);
+		 int[] myArray;
+		 myArray = new int[s];
+		 myArray[0]=1;
+		 myArray[1]=1;
+		 int[] A=new int[s];
+		 int j=s;
+	 for(i=2;i<s;++i)//loop starts from 2 because 0 and 1 are already printed    
+	 {    
+	  n3=n1+n2;    
+	  System.out.print(" "+n3);    
+	  myArray[i]=n3;
+	  n1=n2;    
+	  n2=n3;   
+	  
+	 }    
+	 System.out.print(" \n");
+	  for(i=0;i<s;i++) {
+		  A[j-1]=myArray[i];
+		  j--;
+	  }
+	  for(i=0;i<s;i++) {
+		  System.out.print(A[i]+" ");    
+	  }
+	}
+	
+	
+}
