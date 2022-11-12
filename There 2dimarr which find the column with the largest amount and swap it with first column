@@ -1,0 +1,52 @@
+package forGit;
+
+public class Task3and4_Array {
+	public static void main(String args[])  
+	{   
+		
+		int[][] array = {{1,5,7,9}, 
+						{2,14,0,3}, 
+						{6,10,69,8}, 
+						{0,9,8,1}};
+		int[][] TwolArray = new int [4][4];
+		int max=0;
+		
+		int index=0;
+		
+		  for(int i = 0; i < 4; i++){
+
+	            int sum = 0;
+
+	            for(int j = 0; j < 4; j++){
+	                
+	                sum+= array[j][i];
+
+	            }
+	            if(sum>max){
+	                max = sum;
+	                index = i;
+	            }
+	            
+	        }
+		  for(int i = 0; i < 4; i++){         //there started to change 
+	            int temp = array[i][0];
+	            array[i][0] = array[i][index];
+	            array[i][index] = temp; 
+	        }
+		  
+		for(int i=0;i<4;i++) {
+			for(int j=0;j<4;j++) {
+			System.out.print(array[i][j]+" ");
+			}
+			System.out.println();	
+			}
+		
+		System.out.println("\n Two-dimensional array:");
+		for(int i=0;i<4;i++) {
+			for(int j=0;j<4;j++) {
+			System.out.print(array[j][i]+" ");
+			}
+			System.out.println();	
+			}
+	}
+}
