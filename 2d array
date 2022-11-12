@@ -1,0 +1,90 @@
+package forGit;
+import java.util.Scanner;
+public class Array {
+
+	public static void main(String args[])  
+	{   
+		int size=0;
+		int number=0;
+		Scanner myObj = new Scanner(System.in);
+		size=myObj.nextInt();
+		int[][] arr=new int[size][size];
+		 for(int i=0;i<arr.length;i++) {
+				for(int j=0;j<arr.length;j++) {
+					arr[i][j]= myObj.nextInt(); 
+				}
+				}
+		int max=0;
+		int min =999;
+		int even=0;
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr.length;j++) {
+			if(arr[i][j]%2==0) {
+				even++;
+			}
+			}
+			}
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr.length;j++) {
+			if(max<arr[i][j]) {
+				max=arr[i][j];
+			}
+			}
+			}
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr.length;j++) {
+			if(min>arr[i][j]) {
+				min=arr[i][j];
+			}
+			}
+			}
+		int d1=0;
+		int d2=0;
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr.length;j++) {
+			if(i==j) {
+				d1+=arr[i][j];
+			}
+			}
+			}
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr.length;j++) {
+			if(i+j==size-1) {
+				d2+=arr[i][j];
+			}
+			}
+			}
+		
+		
+		 for(int i=0;i<arr.length;i++) {
+				for(int j=0;j<arr.length;j++) {
+		
+					System.out.print(arr[i][j]+" ");	
+				}System.out.println(" ");
+				}
+		 System.out.print("min element is:"+min +"\n");
+		 System.out.print("max element is:"+max +"\n");
+		 System.out.print("even numbers: "+even+"\n");
+		 System.out.print("main diagonal is:"+d1 +"\n");
+		 System.out.print("secondary diagonal is:"+d2 +"\n");
+		 
+		 int [][]arr1=new int[size][size];
+		 
+		 for(int i=0;i<arr.length;i++) {
+				for(int j=0;j<arr.length;j++) {
+				if(i==j||i<j) {
+					arr1[i][j]=arr[i][j];
+				} 
+				}
+				}
+		 
+				for(int i=0;i<arr1.length;i++) {
+					for(int j=0;j<arr1.length;j++) {
+						if(i==j||i<j) {
+						System.out.print(arr1[i][j]+" ");	
+						}
+					}System.out.println(" ");
+					}
+				}
+		 
+	}
